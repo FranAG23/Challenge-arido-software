@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <title>Buscar Usuario</title>
+  <style>#tableu{
+    display: none;
+  }</style>
+</head>
+<body>
+  <form class="form-register"   id="form">
+    <h4>Ingrese un Usuario</h4>
+    <input class="controls" type="text" name="user_name" id="user_name" placeholder="Ingrese el Usuario" required>
+
+    <a href="usuarios.html" class="buscar">Volver</a>
+    <input class="botons" type="submit" value="Buscar" onclick="mostrar();" id="Buscar">
+ 
+  </form>
+
+    <br>
+  <div class="table-contenedor" id="tableu">
+    <p>Datos del Usuario</p>
+    
+    <table id="table-usersu">
+      <thead>
+      <th>Usuario</th>
+      <th>Estado</th>
+      <th>Fecha de Ingreso</th>
+     </thead>
+    <tbody id="tbusuario">
+      
+      <tr></tr>
+    </tbody>
+  </table>
+  <input class="botons" type="submit" value="Ocultar Usuarios" onclick="ocultar();" id="ocult-users">
+  </div>
+  <script src="JavaScript/searchbyusername.js"></script>
+  <script>
+    const form = document.getElementById("form");
+    form.addEventListener("submit", function(event) {
+
+      event.preventDefault();
+      let formulario = new FormData(form);
+    })
+  function mostrar(){
+    document.getElementById('tableu').style.display ='block';
+  }
+  function ocultar(){
+    document.getElementById('tableu').style.display ='none';
+  }
+</script>
+</body>
+</html>

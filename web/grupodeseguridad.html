@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Grupo de Seguridad</title>
+  <style>#tableu{
+    display: none;
+  }</style>
+</head>
+<body>
+  <form class="form-register"   id="form-register">
+    <h4>Ingrese un Usuario</h4>
+    <input class="controls" type="text" name="user_name" id="user_name" placeholder="Ingrese su Usuario" required>
+    <input class="botons" type="submit" value="Obtener Grupo de Seguridad" onclick="mostrar();" id="Registeru">
+    <a href="usuarios.html" class="buscar">Volver</a>
+  </form>
+  <br>
+  <div class="table-contenedor"  id="tableu">
+    <p>Grupos de Seguridad</p>
+    
+    <table id="table-users">
+      <thead>
+      <th>Usuario</th>
+      <th>Grupos de Seguridad</th>
+     </thead>
+    <tbody id="tbody">
+      
+    </tbody>
+  </table>
+  <input class="botons" type="submit" value="Ocultar Usuarios" onclick="ocultar();" id="ocult-users">
+  </div>
+  <script src="JavaScript/grupodeseguridad.js"></script>
+  <script>
+  function mostrar(){
+    document.getElementById('tableu').style.display ='block';
+  }
+  function ocultar(){
+    document.getElementById('tableu').style.display ='none';
+  }
+</script>
+</body>
+</html>

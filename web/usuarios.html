@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <title>Registro Usuario</title>
+  <style>#table{
+    display: none;
+  }</style>
+</head>
+<body>
+
+
+  <form class="form-register" method="POST"  id="form-register">
+    <h4>Registro Usuario</h4>
+    <input class="controls" type="text" name="user_name" id="user_name" placeholder="Ingrese su Usuario" required>
+    
+      <div class="select-group">
+         <select type="text" class="form-input" id="sgroup_name">
+            <option selected disabled>Seleccione un grupo de seguridad</option>
+            <option value="Solo Lectura">Invitado</option>
+            <option value="Solo Escritura">Usuario</option>
+            <option value="Administrador">Administrador</option>
+            <option value="Root">Usuario Root</option>
+        </select>  
+    </div> 
+
+    <input class="controls" type="password" name="password" id="password" placeholder="Ingrese su Contraseña" required>
+
+    <input class="botons" type="submit" value="Registrar" id="Register">
+
+    <input class="botons" type="submit" value="Usuarios Registrados" onclick="mostrar();"  id="View-users">
+ 
+    <div>
+      <a href="searchbyuser.html" class="buscar">Buscar Usuario</a>
+      <a id="separador">|</a>
+      <a href="grupodeseguridad.html" class="buscarg">Obtener Grupo de Seguridad</a>
+    </div>
+    
+  </form>
+
+<form class="form-register2" method="POST"  id="form-register2">
+  <br>
+  <div class="table-contenedor"  id="table">
+    <p>Usuarios Registrados</p>
+    
+    <table id="table-users">
+      <thead>
+        <th>Usuario</th>
+        <th>Estado</th>
+        <th>Fecha de Ingreso</th>
+     </thead>
+    <tbody>
+      
+    </tbody>
+  </table>
+  <input class="botons" type="submit" value="Ocultar Usuarios" onclick="ocultar();" id="ocult-users">
+  </div>
+</form>
+
+  <script src="JavaScript/usuarios.js"></script>
+  <script>
+    function redir(){
+      window.location.href="";
+    }
+    function mostrar(){
+      document.getElementById('table').style.display ='block';
+    }
+    function ocultar(){
+      document.getElementById('table').style.display ='none';
+    }
+  </script>
+</body>
+</html>

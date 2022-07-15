@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('fondo.jpg');
+}
+
+.form-register {
+  width: 400px;
+  background: #24303c;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 4px;
+  font-family: 'calibri';
+  color: white;
+  box-shadow: 7px 13px 37px #000;
+}
+
+.form-register h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+
+
+.controls {
+  width: 100%;
+  background: #24303c;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #1f53c5;
+  font-family: 'calibri';
+  font-size: 18px;
+  color: white;
+}
+
+
+.select-group .form-input{
+  width: 100%;
+  background: #24303c;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #1f53c5;
+  font-family: 'calibri';
+  font-size: 18px;
+  color: white;
+}
+
+
+.form-register p {
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+}
+.form-register div {
+  text-align: center;
+}
+
+.form-register a,.form-register div a {
+  color: white;
+  text-decoration: none;
+}
+
+#separador{
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.form-register a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.form-register .botons {
+  width: 100%;
+  background: #1f53c5;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+}
+
+
+.table-contenedor .botons{
+  width: 100%;
+  background: #1f53c5;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+}
+
+table{
+  background-color: rgb(243, 243, 243);
+  width: 100%;
+}
+
+table td{
+  padding: 2%;
+  text-align: center;
+}
+
+table thead{
+  background-color: #1f53c5;
+  color: #ffffff;
+}
+
+table tbody tr:nth-child(even){
+background-color: #d9dceb;
+}
+
+.table-contenedor p{
+  padding: 10px;
+  font-family: 'calibri';
+  font-size: 18px;
+}
+.table-contenedor{
+  background-color: #ffffff;
+  padding: 10px;
+  width: 80%;
+  margin: auto;
+  border-radius: 0.5em;
+}
